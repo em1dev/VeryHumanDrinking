@@ -27,7 +27,7 @@ func _ready():
 	musicPlayer.play(0);
 	if !isTimed:
 		score_ui.updateTime(0);
-	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN);
 
 func _process(delta):
 	if (!isTimed || hasEnded):
@@ -46,6 +46,7 @@ func _process(delta):
 		end();
 
 func end():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
 	Global.playEndSFX();
 	var scene = addScoreScene.instantiate();
 	get_tree().root.add_child(scene);

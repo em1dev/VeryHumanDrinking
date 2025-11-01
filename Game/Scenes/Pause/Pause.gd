@@ -11,6 +11,10 @@ func _ready():
 func _physics_process(delta):
 	if Input.is_action_just_pressed("pause"):
 		canvas.visible = !canvas.visible;
+		if (canvas.visible):
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN);
 		get_tree().paused = canvas.visible;
 
 func _on_volume_slider_value_changed(value):
@@ -18,6 +22,7 @@ func _on_volume_slider_value_changed(value):
 	AudioServer.set_bus_mute(masterIndex, value <= -12);
 
 func _on_continue_btn_pressed():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN);
 	Global.playUISFX();
 	canvas.visible = false;
 	get_tree().paused = false;
