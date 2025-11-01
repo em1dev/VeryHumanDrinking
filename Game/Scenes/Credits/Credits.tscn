@@ -27,14 +27,18 @@ font_color = Color(1, 1, 0.623529, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ospc8"]
 
-[node name="Credits" type="Node2D"]
+[node name="Credits" type="CanvasLayer"]
 script = ExtResource("1_uv60t")
 metadata/_edit_vertical_guides_ = [132.0]
 
-[node name="Bg2" type="Sprite2D" parent="."]
-scale = Vector2(4, 4)
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
 texture = ExtResource("1_aah7y")
-centered = false
 
 [node name="Label" type="Label" parent="."]
 offset_left = 132.0
@@ -58,7 +62,7 @@ offset_left = 132.0
 offset_top = 337.0
 offset_right = 657.0
 offset_bottom = 388.0
-text = "Patitodev - twitch.tv/patitodev"
+text = "EmyDev - emydev.itch.io"
 label_settings = SubResource("LabelSettings_hoygu")
 
 [node name="Label4" type="Label" parent="."]

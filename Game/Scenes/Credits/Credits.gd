@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer;
 
 func _on_credits_btn_pressed():
 	Global.playUISFX();

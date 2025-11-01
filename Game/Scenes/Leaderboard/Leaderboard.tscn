@@ -25,6 +25,11 @@ script = ExtResource("1_wvhpn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Bg2" type="TextureRect" parent="CanvasLayer"]
+scale = Vector2(4, 4)
+mouse_filter = 0
+texture = ExtResource("3_cjv68")
+
 [node name="LeaderboardPanel" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
@@ -89,11 +94,6 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_q5htw")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fgjwd")
 text = "Back to menu"
 alignment = 0
-
-[node name="Bg2" type="Sprite2D" parent="."]
-scale = Vector2(4, 4)
-texture = ExtResource("3_cjv68")
-centered = false
 
 [connection signal="request_completed" from="CanvasLayer/LeaderboardPanel/GetLeaderboardHttpRequest" to="." method="_on_get_leaderboard_http_request_request_completed"]
 [connection signal="pressed" from="CanvasLayer/BackBtn" to="." method="_on_back_btn_pressed"]
