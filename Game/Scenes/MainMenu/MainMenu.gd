@@ -33,4 +33,3 @@ func playMusic():
 	if music.playing:
 		return;
 	music.play();
-
