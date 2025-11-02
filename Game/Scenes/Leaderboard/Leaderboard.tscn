@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://d0a3w5cxft3t8"]
 
 [ext_resource type="Texture2D" uid="uid://b70dd5yx8r6mj" path="res://Images/Panels.png" id="1_b0lju"]
-[ext_resource type="Script" path="res://Scenes/Leaderboard/Leaderboard.gd" id="1_wvhpn"]
+[ext_resource type="Script" uid="uid://dcfqilt431kmr" path="res://Scenes/Leaderboard/Leaderboard.gd" id="1_wvhpn"]
 [ext_resource type="FontFile" uid="uid://d2pcyluki87vl" path="res://UI/PeaberryBase.ttf" id="2_0yysq"]
 [ext_resource type="Texture2D" uid="uid://b0pjn2nbe2sct" path="res://Images/bg2.png" id="3_cjv68"]
 
@@ -12,9 +12,9 @@ font_color = Color(0.2, 0.235294, 0.341176, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e6xxr"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2mwy3"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fwaqi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2mwy3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5htw"]
 
@@ -75,7 +75,6 @@ offset_bottom = 982.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/LeaderboardPanel/ScrollContainer"]
 layout_mode = 2
-theme_override_constants/separation = 180
 
 [node name="GetLeaderboardHttpRequest" type="HTTPRequest" parent="CanvasLayer/LeaderboardPanel"]
 
@@ -88,8 +87,8 @@ theme_override_colors/font_hover_color = Color(1, 0.803922, 0.458824, 1)
 theme_override_fonts/font = ExtResource("2_0yysq")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e6xxr")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_2mwy3")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_fwaqi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2mwy3")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_q5htw")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fgjwd")
 text = "Back to menu"

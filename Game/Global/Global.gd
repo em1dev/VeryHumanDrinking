@@ -6,4 +6,4 @@ func playUISFX():
 func playEndSFX():
 	$EndGameSFX.play();
 
-var API_URL = 'http://localhost:8989/entry';
+var API_URL = 'https://api.elpato.dev/VeryHumanDrinking/entry';

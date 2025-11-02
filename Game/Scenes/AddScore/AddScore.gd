@@ -33,9 +33,10 @@ func _on_add_to_leadearboard_btn_pressed():
 	Global.playUISFX();
 	if (!isValid):
 		return;
-		
+	
+	var username = playerNameInput.text.remove_char("\n".unicode_at(0));
 	var payload = {
-		'username': playerNameInput.text,
+		'username': username,
 		'score': score,
 		'waterWasted': waterWasted,
 		'waterConsumed': waterConsumed

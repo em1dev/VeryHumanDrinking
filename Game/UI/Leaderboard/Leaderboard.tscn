@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://bjk5qabtm3m60"]
 
-[ext_resource type="Script" path="res://UI/Leaderboard/Leaderboard.gd" id="1_1vxea"]
+[ext_resource type="Script" uid="uid://darrq3qcwe23h" path="res://UI/Leaderboard/Leaderboard.gd" id="1_1vxea"]
 [ext_resource type="Texture2D" uid="uid://b70dd5yx8r6mj" path="res://Images/Panels.png" id="1_10suk"]
 [ext_resource type="FontFile" uid="uid://d2pcyluki87vl" path="res://UI/PeaberryBase.ttf" id="2_i7coo"]
 
@@ -21,9 +21,9 @@ font_color = Color(0.2, 0.235294, 0.341176, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f84h7"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6sw1v"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pq7kc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6sw1v"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ld60m"]
 
@@ -159,16 +159,16 @@ offset_top = 672.0
 offset_right = 802.0
 offset_bottom = 723.0
 theme_override_colors/font_color = Color(0.101961, 0.109804, 0.172549, 1)
+theme_override_colors/font_focus_color = Color(0.101961, 0.109804, 0.172549, 1)
 theme_override_colors/font_pressed_color = Color(0.101961, 0.109804, 0.172549, 1)
 theme_override_colors/font_hover_color = Color(0.101961, 0.109804, 0.172549, 1)
-theme_override_colors/font_focus_color = Color(0.101961, 0.109804, 0.172549, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.101961, 0.109804, 0.172549, 1)
 theme_override_colors/font_disabled_color = Color(0.101961, 0.109804, 0.172549, 1)
 theme_override_colors/font_outline_color = Color(0.101961, 0.109804, 0.172549, 1)
 theme_override_fonts/font = ExtResource("2_i7coo")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_f84h7")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_6sw1v")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_pq7kc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6sw1v")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_ld60m")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mg5u8")
 text = "Add to leaderboard"
@@ -205,25 +205,19 @@ caret_blink = true
 [node name="PostEntryHttpRequest" type="HTTPRequest" parent="CanvasLayer/ScorePanel"]
 
 [node name="LeaderboardPanel" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/LeaderboardPanel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 105.0
-offset_top = 68.0
-offset_right = 333.0
-offset_bottom = 297.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 121.0
+offset_top = 79.0
+offset_right = 349.0
+offset_bottom = 308.0
 scale = Vector2(4, 4)
 texture = ExtResource("1_10suk")
 region_rect = Rect2(14, 24, 36, 36)
@@ -250,7 +244,8 @@ offset_bottom = 953.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/LeaderboardPanel/ScrollContainer"]
 layout_mode = 2
-theme_override_constants/separation = 5
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="GetLeaderboardHttpRequest" type="HTTPRequest" parent="CanvasLayer/LeaderboardPanel"]
 
