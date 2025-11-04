@@ -1,8 +1,8 @@
 extends Node2D
 
 @onready var musicPlayer = $Music
-const bgMusicLastSeconds = preload("res://Audio/Music/veryveryhumandrinking200bpm.wav")
-const bgMusic = preload("res://Audio/Music/veryveryhumandrinking.wav")
+const bgMusicLastSeconds = preload("res://Audio/Music/mus_VHD_200bpm.wav")
+const bgMusic = preload("res://Audio/Music/mus_VHD_150bpm.wav")
 
 var addScoreScene = preload("res://Scenes/AddScore/AddScore.tscn");
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://b4mg483mtka6n"]
 
-[ext_resource type="Script" path="res://Scenes/MainMenu/MainMenu.gd" id="1_p1k5d"]
+[ext_resource type="Script" uid="uid://dbjg4graeva03" path="res://Scenes/MainMenu/MainMenu.gd" id="1_p1k5d"]
 [ext_resource type="Texture2D" uid="uid://b0pjn2nbe2sct" path="res://Images/bg2.png" id="2_y2rr7"]
 [ext_resource type="FontFile" uid="uid://d2pcyluki87vl" path="res://UI/PeaberryBase.ttf" id="3_778yw"]
-[ext_resource type="AudioStream" uid="uid://cmix5v23gugij" path="res://Audio/Music/veryveryhumandrinking.wav" id="4_naujc"]
+[ext_resource type="AudioStream" uid="uid://ss5vj1gnuka0" path="res://Audio/Music/mus_VHD_150bpm.wav" id="4_kpx3y"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4f56f"]
 font = ExtResource("3_778yw")
@@ -16,9 +16,9 @@ font_color = Color(0.85098, 0.85098, 0.85098, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wexwf"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fnkf6"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u06vf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fnkf6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_17ouk"]
 
@@ -68,8 +68,8 @@ theme_override_colors/font_hover_color = Color(1, 0.803922, 0.458824, 1)
 theme_override_fonts/font = ExtResource("3_778yw")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wexwf")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_fnkf6")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_u06vf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fnkf6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_17ouk")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5n3k6")
 text = "Start"
@@ -81,8 +81,8 @@ theme_override_colors/font_hover_color = Color(1, 0.803922, 0.458824, 1)
 theme_override_fonts/font = ExtResource("3_778yw")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wexwf")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_fnkf6")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_u06vf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fnkf6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_17ouk")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5n3k6")
 text = "Endless mode"
@@ -94,8 +94,8 @@ theme_override_colors/font_hover_color = Color(1, 0.803922, 0.458824, 1)
 theme_override_fonts/font = ExtResource("3_778yw")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wexwf")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_fnkf6")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_u06vf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fnkf6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_17ouk")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5n3k6")
 text = "Leaderboard"
@@ -107,15 +107,15 @@ theme_override_colors/font_hover_color = Color(1, 0.803922, 0.458824, 1)
 theme_override_fonts/font = ExtResource("3_778yw")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wexwf")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_fnkf6")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_u06vf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fnkf6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_17ouk")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5n3k6")
 text = "Credits"
 alignment = 0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_naujc")
+stream = ExtResource("4_kpx3y")
 autoplay = true
 bus = &"Musica"
 
