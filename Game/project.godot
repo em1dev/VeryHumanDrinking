@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="VeryHumanDrinking"
+config/name="Very Human Drinking"
 run/main_scene="res://Scenes/MainMenu/MainMenu.tscn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="uid://f7ae83x4ghqa"
+config/tags=PackedStringArray("web")
 
 [autoload]
 
