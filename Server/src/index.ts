@@ -3,11 +3,8 @@ import { LeaderBoardEntrySchema } from './schema';
 import { newEntryHandler } from './handlers/newEntryHandler';
 import { getLeaderboardHandler } from './handlers/getLeaderboardHandler';
 import { db } from './repository';
-import 'dotenv/config';
 import cors from 'cors';
-
-const SECRET = process.env.SECRET;
-const PORT = process.env.PORT;
+import { config } from './config';
 
 const app = express();
 
@@ -44,7 +41,7 @@ try {
 
 app.delete('/entry/:id', (req, res) => {
   try {
-    if (req.headers.authorization !== SECRET) {
+    if (req.headers.authorization !== config.SECRET) {
       return res.status(403).send();
     }
     db.deleteEntry(req.params.id);
@@ -56,6 +53,6 @@ app.delete('/entry/:id', (req, res) => {
   }
 })
 
-app.listen(PORT, () => {
-  console.log(`Server started at http://localhost:${PORT}`);
+app.listen(config.PORT, () => {
+  console.log(`Server started at http://localhost:${config.PORT}`);
 })

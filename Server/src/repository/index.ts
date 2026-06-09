@@ -1,11 +1,11 @@
 import fs from 'fs';
 import { EntryEntity, LeadearboardEntry } from "../schema";
+import { config } from '../config';
 
-const filePath = './db.json';
 let data: Array<EntryEntity> = [];
 
-if (fs.existsSync(filePath)) {
-  const loadedFile = fs.readFileSync(filePath, { encoding: 'utf-8' });
+if (fs.existsSync(config.DB_FILE_PATH)) {
+  const loadedFile = fs.readFileSync(config.DB_FILE_PATH, { encoding: 'utf-8' });
   data = JSON.parse(loadedFile);
 }
 
@@ -28,7 +28,7 @@ const getAll = () => {
 }
 
 const save = () => {
-  fs.writeFileSync(filePath, JSON.stringify(data), { encoding: 'utf-8' });
+  fs.writeFileSync(config.DB_FILE_PATH, JSON.stringify(data), { encoding: 'utf-8' });
 }
 
 export const db = {
