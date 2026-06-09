@@ -1,4 +1,4 @@
-import { db } from "../db";
+import { db } from "../repository";
 import { LeadearboardEntry } from "../schema";
 
 export const newEntryHandler = (entry: LeadearboardEntry) => {

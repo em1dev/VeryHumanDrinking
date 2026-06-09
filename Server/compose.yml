@@ -1,0 +1,14 @@
+services:
+  drinking-api:
+    build: .
+    ports:
+      - ${PORT}:80
+    environment:
+      - PORT=80
+      - SECRET=${SECRET}
+      - DB_FILE_PATH=/db/db.json
+    volumes:
+      - database-data:/db
+
+volumes:
+  database-data:
