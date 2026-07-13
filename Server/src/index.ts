@@ -11,6 +11,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/health', (_, res) => {
+  res.status(200).send();
+});
+
 app.use('/', (req, _, next) => {
   console.log(`[${req.method}] - ${req.path}`);
   next();
